@@ -29,9 +29,9 @@ class AddStep extends React.Component {
       return
     }
     if (this.state.instruction === 'apply') {
-      this.props.addApply(this.state.value)
+      this.props.addApply(Number(this.state.value))
     } else {
-      this.props.addStep({type: this.state.instruction, value: this.state.value})
+      this.props.addStep({type: this.state.instruction, value: Number(this.state.value)})
     }
     this.setState({value: '', instruction: ''})
   }
