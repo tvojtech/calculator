@@ -1,6 +1,6 @@
 import * as actionNames from './names'
 
-const actionCreator = (type, payload) => {type, payload}
+const actionCreator = (type, payload) => ({type, payload})
 
 export const addStep = payload => actionCreator(actionNames.ADD_INSTRUCTION, payload)
 
