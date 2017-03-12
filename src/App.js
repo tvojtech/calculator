@@ -1,23 +1,19 @@
 import React from 'react';
-import {Navbar, NavbarBrand} from 'reactstrap';
-import logo from './logo.svg';
-import './App.scss';
-import {Provider} from 'react-redux'
+import {Provider as ReduxProvider} from 'react-redux'
 import store from './store'
-import Calculator from './components/Caculator'
+import Calculator from './components/Calculator'
+import Header from './components/Header'
+import './App.scss'
 
 export default () => (
   <div className="App">
-    <Provider store={store}>
+    <ReduxProvider store={store}>
       <div>
-        <Navbar color="faded" light toggleable>
-          <NavbarBrand href="/">
-            <img src={logo} className="App-logo" alt="logo"/>
-            Calculator
-          </NavbarBrand>
-        </Navbar>
-        <Calculator/>
+        <Header/>
+        <div className="container">
+          <Calculator/>
+        </div>
       </div>
-    </Provider>
+    </ReduxProvider>
   </div>
 );
