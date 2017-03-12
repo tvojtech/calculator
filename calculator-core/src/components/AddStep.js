@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
+import {getPlugins} from '../reducers'
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap'
 
 const isStateValid = state => state.instruction !== '' & state.value !== '' && !isNaN(state.value)
@@ -36,7 +37,7 @@ class AddStep extends React.Component {
   }
 
   render() {
-    const {availableInstructions} = this.props
+    const {plugins} = this.props
 
     return (
       <Form inline>
@@ -46,6 +47,7 @@ class AddStep extends React.Component {
                  onChange={this.onInstructionSelect} value={this.state.instruction}>
             <option value=""></option>
             <option value="apply">Apply</option>
+            {plugins.map(plugin => <option value={plugin.type} key={plugin.type}>{plugin.name}</option>)}
           </Input>
         </FormGroup>
         {' '}
@@ -63,4 +65,8 @@ class AddStep extends React.Component {
   }
 }
 
-export default connect(null, actions)(AddStep)
+const mapStateToProps = state => ({
+  plugins: getPlugins(state)
+})
+
+export default connect(mapStateToProps, actions)(AddStep)

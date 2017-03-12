@@ -10,4 +10,11 @@ export const addApply = payload => ({
   payload
 })
 
+export const registerPlugin = payload => {
+  return {
+    type: actionNames.REGISTER_PLUGIN,
+    payload
+  }
+}
+
 export const names = actionNames

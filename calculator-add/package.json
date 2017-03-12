@@ -1,0 +1,22 @@
+{
+  "name": "calculator-add",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js --config webpack.config.js",
+    "test": "./node_modules/mocha/bin/mocha ./src/**/*.test.js --require jsdom-global/register --recursive"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "chai": "^3.5.0",
+    "jsdom": "^9.11.0",
+    "jsdom-global": "^2.1.1",
+    "mocha": "^3.2.0",
+    "webpack": "^2.2.1"
+  }
+}

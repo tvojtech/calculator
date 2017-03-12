@@ -4,6 +4,7 @@ import store from './store'
 import Calculator from './components/Calculator'
 import Header from './components/Header'
 import './App.scss'
+import './load-plugins'
 
 export default () => (
   <div className="App">
