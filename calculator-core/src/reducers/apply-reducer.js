@@ -1,11 +1,13 @@
 import {names} from '../actions'
 
-export default (state = 0, action) => {
+export const defaultValue = 0
+
+export default (state = defaultValue, action) => {
   switch (action.type) {
     case names.ADD_APPLY:
       return action.payload
     case names.RESET_FORM:
-      return 0
+      return defaultValue
     default:
       return state
   }
