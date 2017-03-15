@@ -15,7 +15,6 @@ export const getInstructionList = state => instructionsSelectors.getInstructionL
 export const getApplyValue = state => applySelectors.getApplyValue(state.apply)
 export const getPlugins = state => pluginsSelectors.getPlugins(state.plugins)
 export const getCalculatorResultValue = state => {
-  console.log('getCalculatorResultValue')
   const initialValue = getApplyValue(state)
   const plugins = getPlugins(state)
   return getInstructionList(state).reduce((acc, instr) => {
