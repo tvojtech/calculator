@@ -4,7 +4,7 @@ import AddStep from './AddStep'
 import Results from './Results'
 
 export default () => (
-  <div>
+  <div className="calculator-body">
     <AddStep/>
     <InstructionList/>
     <Results/>

@@ -11,7 +11,7 @@ export default () => (
     <ReduxProvider store={store}>
       <div>
         <Header/>
-        <div className="container">
+        <div className="main-content">
           <Calculator/>
         </div>
       </div>

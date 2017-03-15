@@ -53,12 +53,12 @@ class AddStep extends React.Component {
         {' '}
         <FormGroup>
           <Label for="Value" hidden>Value</Label>
-          <Input type="text" name="value" id="value" placeholder="Value" onChange={this.onValueChange}
+          <Input type="text" name="value" id="value" placeholder="enter a number" onChange={this.onValueChange}
                  value={this.state.value}/>
         </FormGroup>
         {' '}
         <Button type="button" disabled={!isStateValid(this.state)} onClick={this.onInstructionSubmit}>
-          Add Instruction
+          Add Step
         </Button>
       </Form>
     )

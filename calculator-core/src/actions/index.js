@@ -15,4 +15,7 @@ export const registerPlugin = payload => actionCreator(actionNames.REGISTER_PLUG
 
 export const resetForm = () => actionCreator(actionNames.RESET_FORM)
 
+export const showResult = () => actionCreator(actionNames.SHOW_RESULT)
+export const hideResult = () => actionCreator(actionNames.HIDE_RESULT)
+
 export const names = actionNames

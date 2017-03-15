@@ -3,10 +3,12 @@ import {connect} from 'react-redux'
 import {selectors} from '../reducers'
 
 const InstructionList = ({instructions, apply}) => (
-  <ul>
-    {instructions.map((instruction, idx) => <li key={idx}>{instruction.name} {instruction.value}</li>)}
-    {<li>{'Apply ' + apply}</li>}
-  </ul>
+  <div className="instruction-list">
+    <ol>
+      {instructions.map((instruction, idx) => <li key={idx}>{instruction.name} {instruction.value}</li>)}
+      {<li>{'Apply ' + apply}</li>}
+    </ol>
+  </div>
 )
 
 const mapStateToProps = state => ({
